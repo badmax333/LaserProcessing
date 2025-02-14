@@ -18,9 +18,11 @@
 
 - LaserProcessing/data_base/ILT_data_base.db — файл базы данных (его необходимо загрузить на свой жёсткий диск);
 - LaserProcessing/data_base/data_extract.py — скрипты на Python для извлечения текстовых и медиаданных. Они требуют подключения к файлу базы данных, поэтому для их использования необходимо поместить файл ILT_data_base.db и data_extract.py в одну директорию;
-- LaserProcessing/data_base/segmentation_1.py — алгоритм для автоматического определения ширины лазерного трека на микрофотографии. Реализован с помощью модуля cv2, для его использования необходимо установить библиотеку OpenCV. Сделать это можно следующей командой:pip3 install opencv-python
+- LaserProcessing/data_base/segmentation_1.py — алгоритм для автоматического определения ширины лазерного трека на микрофотографии. Реализован с помощью модулей cv2 и Image, для их использования необходимо установить библиотек OpenCV и PIL соответственно, а также включить в проект фреймворк Numpy. Сделать это можно следующей командой:
 ~~~
-pip3 install opencv-python 
+pip3 install opencv-python
+pip install pillow
+pip install numpy 
 ~~~
 
   
