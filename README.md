@@ -1,33 +1,7 @@
 # LaserProcessing
-## solvers/gfmd 
-- Contact mechanics simulation by Green's function molecular dynamics (GFMD) method in continuum formulation.
-
-This is the reference implementation for flat two-dimensional elastic half-space statically indented by a rigid friction-less probe of a defined height profile.
-This can be used for engineering of contact between a linearly grooved and a smooth surfaces.
-
-The two following system state quantities are output of the numerical simulation: 
-1. Normal force distribution along the surface in the rigid punch problem.
-2. Height function of the punch and surface displacement in the rigid punch problem.
-
-In order to use the program you will need:
-1. Unix-like operating system.
-2. Fastest Fourier Transform in the West (FFTW) software library (http://www.fftw.org/). Tested version 3.3.7.
-3. Clang/LLVM compiler tools (https://clang.llvm.org/). Tested version 3.8.1.
-4. GNU "Make" (https://www.gnu.org/software/make/). Tested version 4.1.
-
-In order to build and run the program, execute the command "make" in the working directory with these files.
-
-For more details on the physical model see the following work:
-1. N. Prodanov, W. B. Dapp, M. H. Mueser, "On the Contact Area and Mean Gap of Rough, Elastic Contacts: Dimensional Analysis, Numerical Corrections, and Reference Data", Tribol. Lett. (2014) 53:433-448, DOI: 10.1007/s11249-013-0282-z.
-
----
-Leonid Dorogin, St.-Petersburg, 2025.
-
-
-
 ## data_base
 
-В директории находится тестовый массив размеченных данных, представленный в ILT_data_base.db, а также вспомогательные срипты для упрощения взаимодейтсвия с данными. Файл содержит 3 табилцы: laser_modes, microscope_results и profile_results, связанных по полю mode_name типом связи один к одному. Т
+В директории находится тестовый массив размеченных данных, представленный в ILT_data_base.db, а также вспомогательные срипты для упрощения взаимодейтсвия с данными. Файл содержит 3 табилцы: laser_modes, microscope_results и profile_results, связанных по полю mode_name типом связи один к одному.
 
 <center><img src="https://github.com/ILT-ITMO/LaserProcessing/blob/main/data_base/scheme" width="500"/></center>
 
@@ -52,3 +26,31 @@ pip3 install opencv-python
 Для удобной визуализации файла .db можно воспользоваться расширением на браузер Google Chrome, [установить его можно тут](https://chromewebstore.google.com/detail/sqlite-browser-%D0%B4%D0%BB%D1%8F-%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%BE/iclckldkfemlnecocpphinnplnmijkol?hl=ru)   
 
 <u>NB</u>: Поле micro_photo таблицы microscope_results предсталвенно в виде байтовой последовательности, поэтому использую обычный SQL запрос получить информативынй ответ не получится. Для извлечения графического изображения воспользуйтесь data_extract.jpeg_extract и пропишите в теле функции необходимый вам SQL запрос
+
+---
+
+## solvers/gfmd 
+- Contact mechanics simulation by Green's function molecular dynamics (GFMD) method in continuum formulation.
+
+This is the reference implementation for flat two-dimensional elastic half-space statically indented by a rigid friction-less probe of a defined height profile.
+This can be used for engineering of contact between a linearly grooved and a smooth surfaces.
+
+The two following system state quantities are output of the numerical simulation: 
+1. Normal force distribution along the surface in the rigid punch problem.
+2. Height function of the punch and surface displacement in the rigid punch problem.
+
+In order to use the program you will need:
+1. Unix-like operating system.
+2. Fastest Fourier Transform in the West (FFTW) software library (http://www.fftw.org/). Tested version 3.3.7.
+3. Clang/LLVM compiler tools (https://clang.llvm.org/). Tested version 3.8.1.
+4. GNU "Make" (https://www.gnu.org/software/make/). Tested version 4.1.
+
+In order to build and run the program, execute the command "make" in the working directory with these files.
+
+For more details on the physical model see the following work:
+1. N. Prodanov, W. B. Dapp, M. H. Mueser, "On the Contact Area and Mean Gap of Rough, Elastic Contacts: Dimensional Analysis, Numerical Corrections, and Reference Data", Tribol. Lett. (2014) 53:433-448, DOI: 10.1007/s11249-013-0282-z.
+
+---
+
+Leonid Dorogin, St.-Petersburg, 2025.
+
