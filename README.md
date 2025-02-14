@@ -29,7 +29,7 @@ Leonid Dorogin, St.-Petersburg, 2025.
 
 В директории находится тестовый массив размеченных данных, представленный в ILT_data_base.db, а также вспомогательные срипты для упрощения взаимодейтсвия с данными. Файл содержит 3 табилцы: laser_modes, microscope_results и profile_results, связанных по полю mode_name типом связи один к одному. Т
 
-<img src="https://sosny.ru/images/Our_Products/profilometr_2.jpg" alt="Описание изображения" width="50" />
+<center><img src="https://github.com/ILT-ITMO/LaserProcessing/blob/main/data_base/scheme" width="500"/></center>
 
 
 
